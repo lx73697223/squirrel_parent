@@ -37,6 +37,7 @@
         <testng.version>6.10</testng.version>
 
         <squirrel-cloud-services.version>1.0-SNAPSHOT</squirrel-cloud-services.version>
+        <squirrel-common-libs.version>1.0-SNAPSHOT</squirrel-common-libs.version>
     </properties>
 
     <dependencyManagement>
@@ -253,6 +254,33 @@
                 <artifactId>squirrel-cloud-starter-client</artifactId>
                 <version>${squirrel-cloud-services.version}</version>
             </dependency>
+            <!-- squirrel common begin -->
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-common-utils</artifactId>
+                <version>${squirrel-common-libs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-common-jackson</artifactId>
+                <version>${squirrel-common-libs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-common-persistence</artifactId>
+                <version>${squirrel-common-libs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-common-autoconfigure</artifactId>
+                <version>${squirrel-common-libs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-common-test</artifactId>
+                <version>${squirrel-common-libs.version}</version>
+            </dependency>
+            <!-- squirrel common end -->
         </dependencies>
     </dependencyManagement>
 
