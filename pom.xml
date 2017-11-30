@@ -39,6 +39,7 @@
 
         <squirrel-cloud-services.version>1.0-SNAPSHOT</squirrel-cloud-services.version>
         <squirrel-common-libs.version>1.0-SNAPSHOT</squirrel-common-libs.version>
+        <squirrel-user-center.version>1.0-SNAPSHOT</squirrel-user-center.version>
     </properties>
 
     <dependencyManagement>
@@ -290,6 +291,11 @@
                 <version>${squirrel-common-libs.version}</version>
             </dependency>
             <!-- squirrel common end -->
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-user-endpoint-interface</artifactId>
+                <version>${squirrel-user-center.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
