@@ -293,7 +293,7 @@
             <!-- squirrel common end -->
             <dependency>
                 <groupId>com.pipi</groupId>
-                <artifactId>squirrel-user-endpoint-interface</artifactId>
+                <artifactId>squirrel-usercenter-endpoint-interface</artifactId>
                 <version>${squirrel-user-center.version}</version>
             </dependency>
         </dependencies>
