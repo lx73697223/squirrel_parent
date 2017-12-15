@@ -19,22 +19,25 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
         <java.version>1.8</java.version>
+        
         <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
         <spring-boot-admin.version>1.5.4</spring-boot-admin.version>
         <springfox-swagger.version>2.6.1</springfox-swagger.version>
-        <nimbus-jose-jwt.version>4.27</nimbus-jose-jwt.version>
-        <woodstox.version>5.0.2</woodstox.version>
+        
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <commons-io.version>2.5</commons-io.version>
+        <nimbus-jose-jwt.version>4.27</nimbus-jose-jwt.version>
+        <woodstox.version>5.0.2</woodstox.version>
         <zxing.version>3.3.0</zxing.version>
-        <guava.version>21.0</guava.version>
         <orika.version>1.4.6</orika.version>
-        <quartz.version>2.2.3</quartz.version>
-        <mybatis-spring-boot.version>1.3.1</mybatis-spring-boot.version>
-        <mysql-connector.version>5.1.6</mysql-connector.version>
         <lombok.version>1.16.16</lombok.version>
         <testng.version>6.10</testng.version>
+        <quartz.version>2.2.3</quartz.version>
+        
+        <mybatis-spring-boot.version>1.3.1</mybatis-spring-boot.version>
+        <mysql-connector.version>5.1.6</mysql-connector.version>
+        <guava.version>21.0</guava.version>
 
         <squirrel-cloud-services.version>1.0-SNAPSHOT</squirrel-cloud-services.version>
         <squirrel-common-libs.version>1.0-SNAPSHOT</squirrel-common-libs.version>
@@ -299,6 +302,22 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <!-- 打包时生成源码包 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <configuration>
+                        <attach>true</attach>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
