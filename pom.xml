@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
 
     <properties>
@@ -20,10 +20,10 @@
         <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
         <java.version>1.8</java.version>
         
-        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
+        <servlet.version>3.1.0</servlet.version>
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
         <spring-boot-admin.version>1.5.4</spring-boot-admin.version>
         <springfox-swagger.version>2.6.1</springfox-swagger.version>
-        <okta-spring-boot.version>0.2.0</okta-spring-boot.version>
 
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-collections4.version>4.1</commons-collections4.version>
@@ -43,6 +43,7 @@
         <squirrel-cloud-services.version>1.0-SNAPSHOT</squirrel-cloud-services.version>
         <squirrel-common-libs.version>1.0-SNAPSHOT</squirrel-common-libs.version>
         <squirrel-user-center.version>1.0-SNAPSHOT</squirrel-user-center.version>
+        <squirrel-oauth.version>1.0-SNAPSHOT</squirrel-oauth.version>
     </properties>
 
     <dependencyManagement>
@@ -59,6 +60,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-logging</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- spring boot admin start -->
@@ -252,13 +259,6 @@
                 <scope>provided</scope>
             </dependency>
 
-            <!-- okta oauth -->
-            <dependency>
-                <groupId>com.okta.spring</groupId>
-                <artifactId>okta-spring-boot-starter</artifactId>
-                <version>${okta-spring-boot.version}</version>
-            </dependency>
-
             <!-- test begin -->
             <dependency>
                 <groupId>org.testng</groupId>
@@ -305,6 +305,18 @@
                 <artifactId>squirrel-user-account-endpoint-intf</artifactId>
                 <version>${squirrel-user-center.version}</version>
             </dependency>
+            <!-- squirrel oauth begin -->
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-oauth-core</artifactId>
+                <version>${squirrel-oauth.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.pipi</groupId>
+                <artifactId>squirrel-resource-service-sdk</artifactId>
+                <version>${squirrel-oauth.version}</version>
+            </dependency>
+            <!-- squirrel oauth end -->
         </dependencies>
     </dependencyManagement>
 
