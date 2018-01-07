@@ -29,6 +29,7 @@
         <commons-collections4.version>4.1</commons-collections4.version>
         <commons-io.version>2.5</commons-io.version>
         <nimbus-jose-jwt.version>4.27</nimbus-jose-jwt.version>
+        <jose4j.version>0.6.3</jose4j.version>
         <woodstox.version>5.0.2</woodstox.version>
         <zxing.version>3.3.0</zxing.version>
         <orika.version>1.4.6</orika.version>
@@ -108,9 +109,9 @@
 
             <!-- JWT library -->
             <dependency>
-                <groupId>com.nimbusds</groupId>
-                <artifactId>nimbus-jose-jwt</artifactId>
-                <version>${nimbus-jose-jwt.version}</version>
+                <groupId>org.bitbucket.b_c</groupId>
+                <artifactId>jose4j</artifactId>
+                <version>${jose4j.version}</version>
             </dependency>
 
             <!-- apache common utils begin -->
@@ -308,12 +309,7 @@
             <!-- squirrel oauth begin -->
             <dependency>
                 <groupId>com.pipi</groupId>
-                <artifactId>squirrel-oauth-core</artifactId>
-                <version>${squirrel-oauth.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.pipi</groupId>
-                <artifactId>squirrel-resource-service-sdk</artifactId>
+                <artifactId>squirrel-resource-server-sdk</artifactId>
                 <version>${squirrel-oauth.version}</version>
             </dependency>
             <!-- squirrel oauth end -->
